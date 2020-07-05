@@ -1,3 +1,5 @@
+![KCCacheProxy Package](https://github.com/kozora/KCCacheProxy/workflows/KCCacheProxy%20Package/badge.svg?branch=master)
+
 KanColle Cache Proxy
 =======
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A81MOVN)
