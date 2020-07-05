@@ -12,7 +12,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: |
+    run: |
     apt install -y p7zip-full
     mkdir -p out/KCCacheProxy/
     npm install
