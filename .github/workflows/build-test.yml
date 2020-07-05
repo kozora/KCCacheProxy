@@ -10,8 +10,7 @@ jobs:
     # Setup .npmrc file to publish to npm
     - uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
-        registry-url: 'https://registry.npmjs.org'
+        node-version: '12'
     # npm install
     - run: apt install -y p7zip-full
     - run: mkdir -p out/KCCacheProxy/
