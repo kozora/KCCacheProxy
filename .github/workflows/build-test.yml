@@ -17,8 +17,3 @@ jobs:
     - run: npm install
     - run: npm install pkg -g
     - run: pkg --out-path out src/proxy/proxy.js
-    - run: cp -r cache_template/* out/KCCacheProxy/
-    - run: cd out
-    - run: cp -r KCCacheProxy/ KCCacheProxy-linux/ && mv proxy-linux KCCacheProxy-linux/proxy-linux && 7z a KCCacheProxy-linux.zip KCCacheProxy-linux && rm -r KCCacheProxy-linux &
-    - run: rm -r KCCacheProxy*/
-    - run: rm -r make
