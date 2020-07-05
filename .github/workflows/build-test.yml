@@ -1,0 +1,25 @@
+name: KCCacheProxy Package
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # Setup .npmrc file to publish to npm
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+    - run: |
+    apt install -y p7zip-full
+    mkdir -p out/KCCacheProxy/
+    npm install
+    npm install pkg -g
+    pkg --out-path out src/proxy/proxy.js
+    cp -r cache_template/* out/KCCacheProxy/
+    cd out
+    cp -r KCCacheProxy/ KCCacheProxy-linux/ && mv proxy-linux KCCacheProxy-linux/proxy-linux && 7z a KCCacheProxy-linux.zip KCCacheProxy-linux && rm -r KCCacheProxy-linux &
+    rm -r KCCacheProxy*/
+    rm -r make
